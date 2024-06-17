@@ -8,10 +8,10 @@ app = Flask(__name__)
 def get_db_connection():
     try:
         conn = psycopg2.connect(
-            dbname='myproj',
-            user='myuser',
-            password='mypassword',
-            host='localhost'
+            dbname='xxxx',
+            user='xxxx',
+            password='xxxxx',
+            host='xxxxx'
         )
         return conn
     except OperationalError as e:
