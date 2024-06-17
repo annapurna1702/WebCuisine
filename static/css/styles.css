@@ -1,27 +1,40 @@
-h1 {
-    font-family: 'Playfair Display', serif;
-    font-style: oblique;
-    background-image: url('C:/Users/green/Desktop/web project 2/static/images/bgimg5.jpg');
 
-}
-h2{
-    color: #e8c089;
-    
-}
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     transition: background-color 0.5s;
     background-color: #0e0e0e;
-     
 }
 
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-style: oblique;
+    background-image: url('/static/images/bgimg5.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    color: #e8c089;
+    text-align: center;
+}
+
+.content {
+    padding: 30px;
+    background-image: url('/static/images/bgimg5.jpg');
+    background-size: cover;
+}
+
+/* Carousel styles */
 .carousel-container {
     margin-top: 0%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width:100%;
+    width: 100%;
     height: 100vh;
     overflow: hidden;
     position: relative;
@@ -34,7 +47,7 @@ body {
     border: 2px solid #040000;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .carousel-item {
@@ -94,53 +107,34 @@ body {
 .carousel-button:hover {
     background-color: rgba(219, 101, 11, 0.8);
 }
-.content{
-    padding: 30px;
-    background-image: url('C:/Users/green/Desktop/web project 2/static/images/bgimg5.jpg');
-}
 
+/* Media queries */
 @media (max-width: 768px) {
-    .carousel {
-        width: 90%;
-    }
-
     h1 {
-        font-size: 24px; 
+        font-size: 24px;
+        padding: 10px;
     }
-    body {
-        background-size: contain; 
-    }
-    .content{
-        width:100%;
-        height:100%;
-        padding:0px
+    .content {
+        padding: 10px;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
     h1 {
-        font-size: 36px; 
+        font-size: 36px;
+        padding: 15px;
     }
-    body {
-        background-size: contain; 
-    }
-    .content{
-        width:100%;
-        height:100%;
-        padding:20px
+    .content {
+        padding: 20px;
     }
 }
 
 @media (min-width: 1025px) {
     h1 {
-        font-size: 70px; 
+        font-size: 70px;
+        padding: 20px;
     }
-    body {
-        background-size: 1025px auto; 
-    }
-    .content{
-        width:100%;
-        height:100%;
-        padding:10px
+    .content {
+        padding: 30px;
     }
 }

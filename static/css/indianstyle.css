@@ -1,90 +1,79 @@
 body {
-    background-color:rgb(24, 24, 24);
-}
-nav {
-    background-image: url('C:/Users/green/Desktop/web project 2/static/images/bgimg5.jpg');
-    color: aliceblue;
+    background-color: rgb(24, 24, 24);
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-#navarab {
-    background-image: url('C:/Users/green/Desktop/web project 2/static/images/bgimg5.jpg');
+nav, #navarab, #navchinese {
+    background-image: url('/static/images/bgimg5.jpg'); 
+    background-size: cover;
+    background-position: center;
     color: aliceblue;
+    padding: 10px;
 }
 
-#navchinese {
-    background-image: url('C:/Users/green/Desktop/web project 2/static/images/bgimg5.jpg');
+a {
     color: aliceblue;
-}
-
-a{
-    color: aliceblue;
+    text-decoration: none; 
 }
 
 .card {
     margin: 30px;
-    display: inline;
-    
-    
-}
-
-.card-container {
-    display: flex;
-    justify-content: center; 
-    gap: 20px; 
-    padding: 20px;
-    flex-wrap: wrap; 
-}
-.card img {
-    width: 100%;
-    height: 200px
+    display: inline-block; 
+    width: 18rem; 
+    background-color: #333; 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out; 
 }
 
 .card:hover {
     transform: scale(1.05); 
 }
 
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #ddd;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
 @media (max-width: 768px) {
-    .carousel {
-        width: 90%;
-    }
-
-    h1 {
-        font-size: 24px; 
-    }
-    body {
-        background-size: contain; 
-    }
-    .card-container {
-        width: 100%;
-
-
+    .card {
+        width: 90%; 
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    h1 {
-        font-size: 36px; 
-    }
-    body {
-        background-size: contain; 
-    }
-    .card-container {
-        width: 100%;
-
-
+    .card {
+        width: calc(50% - 40px); 
     }
 }
 
 @media (min-width: 1025px) {
-    h1 {
-        font-size: 70px; 
-    }
-    body {
-        background-size: 1025px auto; 
-    }
-    .card-container {
-        width: 100%;
-
-
+    .card {
+        width: calc(33.33% - 40px); 
     }
 }

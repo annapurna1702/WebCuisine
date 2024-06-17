@@ -5,27 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Carousel</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="C:/Users/green/Desktop/web project 2/static/css/styles.css">
-    
-    
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
-<body >
+<body>
     <h1 style="color: rgb(238, 223, 205);margin-top: 0%;">Cuisine Hub</h1>
     <div class="carousel-container">
         <div class="carousel">
             <div class="carousel-item" data-color="#32250E">
-                
-                <img src="C:/Users/green/Desktop/web project 2/static/images/img1.jpg" alt="Image 1">
-                <button onclick="location.href='indian.html'">Explore Indian Cuisine</button>
+                <img src="{{ url_for('static', filename='images/img1.jpg') }}" alt="Image 1">
+                <button onclick="location.href='/indian'">Explore Indian Cuisine</button>
             </div>
             <div class="carousel-item" data-color="#034033">
-                <img src="C:/Users/green/Desktop/web project 2/static/images/img2.avif" alt="Image 2">
-                <button onclick="location.href='arabic.html'">Explore Arabian Cuisine</button>
+                <img src="{{ url_for('static', filename='images/img2.avif') }}" alt="Image 2">
+                <button onclick="location.href='/arabic'">Explore Arabian Cuisine</button>
             </div>
             <div class="carousel-item" data-color="#6B1919">
-                <img src="C:/Users/green/Desktop/web project 2/static/images/img3.jpg" alt="Image 3">
-                <button onclick="location.href='chinese.html'">Explore Chinese Cuisine</button>
+                <img src="{{ url_for('static', filename='images/img3.jpg') }}" alt="Image 3">
+                <button onclick="location.href='/chinese'">Explore Chinese Cuisine</button>
             </div>
         </div>
         <button class="carousel-button left" onclick="prevItem()">&#10094;</button>
@@ -35,6 +31,6 @@
         <h2><b><i>Explore different cuisines...</i></b></h2>
         <p style="color: antiquewhite;">This website aims to explore different cuisines from around the world. We begin with Indian, Arabian and Chinese cuisines. Happy exploring!</p>
     </div>
-    <script src="C:/Users/green/Desktop/web project 2/static/js/specify.js"></script>
+    <script src="{{ url_for('static', filename='js/specify.js') }}"></script>
 </body>
 </html>
